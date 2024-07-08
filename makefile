@@ -1121,6 +1121,9 @@ endif
 ifeq ($(NEW_GIT_VERSION),)
 NEW_GIT_VERSION := unknown
 endif
+ifdef COMMIT
+NEW_GIT_VERSION := $(COMMIT)
+endif
 
 GENIE := 3rdparty/genie/bin/$(GENIEOS)/genie$(EXE)
 
